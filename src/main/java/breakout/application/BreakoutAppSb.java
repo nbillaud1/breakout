@@ -1,5 +1,6 @@
 package breakout.application;
 
+import breakout.controller.GameViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -14,15 +15,14 @@ public class BreakoutAppSb extends Application {
 		loader.setLocation(getClass().getResource("/breakout/view/GameViewBreakout.fxml"));
 		StackPane root = new StackPane();
 		root.getChildren().add(loader.load());
-		
-		/*GameViewController controller = loader.getController(); 
-		controller.setRoundConter(turnNumber);
-	    controller.setPlayer1Name(this.player1Name()); // si on veux communiquer entre un lobby et le jeu en lui même.
-	    controller.setPlayer2Name(this.player2Name());
-	    controller.initialize();*/
-		
 		Scene scene = new Scene(root, 700, 800);
+		
+		GameViewController controller = loader.getController(); 
+	    controller.setScene(scene); 							// on donne la scene pour savoir quoi controller au clavier.
+	    controller.movePad();
+		
 		primaryStage.setScene(scene);
+		primaryStage.setTitle("Breakout!");
 		primaryStage.show();
 	}
 	

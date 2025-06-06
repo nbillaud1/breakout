@@ -1,6 +1,6 @@
 package breakout.model;
 
-public class Brick {
+public class Brick{
 	private int difficulty;
 	
 	public Brick(int difficulty) {
@@ -13,5 +13,13 @@ public class Brick {
 	
 	public String toString() {
 		return "[" + this.difficulty + "]";
+	}
+	
+	public void touched() {
+		difficulty --;
+	}
+	
+	public void setDifficulty(int difficulty) {
+		this.difficulty = difficulty;
 	}
 }

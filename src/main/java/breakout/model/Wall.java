@@ -3,7 +3,7 @@ package breakout.model;
 import java.util.ArrayList;
 
 public class Wall {
-	private static final int WALL_LENGTH = 8;
+	private static final int WALL_LENGTH = 10;
 	private ArrayList<ArrayList<Brick>> wall;
 	
 	public Wall() {

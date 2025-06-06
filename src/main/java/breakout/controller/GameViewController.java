@@ -1,5 +1,6 @@
 package breakout.controller;
 
+import breakout.model.Wall;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -9,8 +10,11 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Labeled;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
@@ -27,6 +31,15 @@ public class GameViewController implements EventHandler<MouseEvent>{
 	private Circle idBall;
 	
 	@FXML
+	private GridPane idWall;
+	
+	@FXML
+	private StackPane idBrick1_9;
+	
+	@FXML
+	private StackPane idBrick1_8;
+	
+	@FXML
 	private void quit() {
 		Platform.exit();
 	}
@@ -40,6 +53,9 @@ public class GameViewController implements EventHandler<MouseEvent>{
 	public void initialize() {
 		Timeline timeline = animateBall(idBall);
 	    timeline.play();
+	    
+	    ((Labeled) idBrick1_8.getChildren().get(1)).setText("7");
+	    ((Labeled) idBrick1_9.getChildren().get(1)).setText("8");
 	}
 	
 	 private Timeline animateBall (Circle ball) {

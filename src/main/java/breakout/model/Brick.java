@@ -15,10 +15,6 @@ public class Brick{
 		return "[" + this.difficulty + "]";
 	}
 	
-	public void touched() {
-		difficulty --;
-	}
-	
 	public void setDifficulty(int difficulty) {
 		this.difficulty = difficulty;
 	}

@@ -42,311 +42,61 @@
             <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
-         <children>
-            <StackPane fx:id="idBrick1_9" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="9">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="5" />
-               </children>
-            </StackPane>
-            <StackPane fx:id="idBrick1_8" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="5" />
-               </children>
-            </StackPane>
-            <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="5" />
-               </children>
-            </StackPane>
-            <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="5" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="5" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="5" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="5" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="5" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="5" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="5" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="1">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1eff34" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="4" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="1">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1eff34" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="4" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1eff34" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="4" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1eff34" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="4" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1eff34" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="4" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1eff34" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="4" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1eff34" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="4" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1eff34" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="4" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1eff34" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="4" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1eff34" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="4" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff41f" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="3" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="2">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff41f" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="3" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="2">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff41f" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="3" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff41f" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="3" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff41f" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="3" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff41f" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="3" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff41f" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="3" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff41f" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="3" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff41f" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="3" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff41f" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="3" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="3">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e221ff" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="2" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="3">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e221ff" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="2" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="3">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e221ff" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="2" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e221ff" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="2" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e221ff" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="2" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e221ff" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="2" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e221ff" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="2" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e221ff" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="2" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e221ff" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="2" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e221ff" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="2" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="4">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff2121" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="1" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="4">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff2121" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="1" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="4">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff2121" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="1" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="4">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff2121" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="1" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="4">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff2121" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="1" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff2121" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="1" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff2121" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="1" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff2121" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="1" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff2121" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="1" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff2121" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-                  <Label text="1" />
-               </children>
-            </StackPane>
-         </children>
          <StackPane.margin>
             <Insets top="5.0" />
          </StackPane.margin>
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #a400ff;" text="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #a400ff;" text="5" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #a400ff;" text="5" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #a400ff;" text="5" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #a400ff;" text="5" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #a400ff;" text="5" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #a400ff;" text="5" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #a400ff;" text="5" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #a400ff;" text="5" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #a400ff;" text="5" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ff0000; -fx-border-color: black;" text="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ff0000; -fx-border-color: black;" text="4" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ff0000; -fx-border-color: black;" text="4" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ff0000; -fx-border-color: black;" text="4" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ff0000; -fx-border-color: black;" text="4" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ff0000; -fx-border-color: black;" text="4" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ff0000; -fx-border-color: black;" text="4" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ff0000; -fx-border-color: black;" text="4" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ff0000; -fx-border-color: black;" text="4" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ff0000; -fx-border-color: black;" text="4" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #ff9900;" text="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #ff9900;" text="3" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #ff9900;" text="3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #ff9900;" text="3" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #ff9900;" text="3" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #ff9900;" text="3" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #ff9900;" text="3" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #ff9900;" text="3" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #ff9900;" text="3" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: black; -fx-background-color: #ff9900;" text="3" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0088ff; -fx-border-color: black;" text="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0088ff; -fx-border-color: black;" text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0088ff; -fx-border-color: black;" text="2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0088ff; -fx-border-color: black;" text="2" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0088ff; -fx-border-color: black;" text="2" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0088ff; -fx-border-color: black;" text="2" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0088ff; -fx-border-color: black;" text="2" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0088ff; -fx-border-color: black;" text="2" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0088ff; -fx-border-color: black;" text="2" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0088ff; -fx-border-color: black;" text="2" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #00ff00; -fx-border-color: black;" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #00ff00; -fx-border-color: black;" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #00ff00; -fx-border-color: black;" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #00ff00; -fx-border-color: black;" text="1" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #00ff00; -fx-border-color: black;" text="1" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #00ff00; -fx-border-color: black;" text="1" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #00ff00; -fx-border-color: black;" text="1" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #00ff00; -fx-border-color: black;" text="1" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #00ff00; -fx-border-color: black;" text="1" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #00ff00; -fx-border-color: black;" text="1" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+         </children>
       </GridPane>
    </children>
 </StackPane>

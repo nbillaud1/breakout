@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class BreakoutAppSb extends Application {
 
@@ -23,6 +24,8 @@ public class BreakoutAppSb extends Application {
 		
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Breakout!");
+		primaryStage.setResizable(false);
+		primaryStage.initStyle(StageStyle.UNDECORATED);
 		primaryStage.show();
 	}
 	

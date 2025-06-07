@@ -1,5 +1,6 @@
 package breakout.controller;
 
+import breakout.audio.MusicManager;
 import breakout.model.Wall;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
@@ -8,6 +9,9 @@ import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.geometry.Bounds;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Labeled;
@@ -45,6 +49,10 @@ public class GameViewController implements EventHandler<MouseEvent>{
 	}
 	
 	private Scene scene;
+	private Boolean collision = false;
+	
+	private double ballSpeedX = 2;
+	private double ballSpeedY = 2;
 	
 	public void setScene(Scene scene) {
 		this.scene = scene;
@@ -52,19 +60,50 @@ public class GameViewController implements EventHandler<MouseEvent>{
 
 	public void initialize() {
 		Timeline timeline = animateBall(idBall);
-	    timeline.play();
-	    
-	    ((Labeled) idBrick1_8.getChildren().get(1)).setText("7");
-	    ((Labeled) idBrick1_9.getChildren().get(1)).setText("8");
+		timeline.play();
 	}
 	
-	 private Timeline animateBall (Circle ball) {
-	        KeyValue kv = new KeyValue(ball.translateYProperty(), ball.translateYProperty().get() + 300, Interpolator.EASE_IN);
-	        KeyFrame kf = new KeyFrame(Duration.millis(1000), kv);
-	        Timeline timeline = new Timeline();
-	        timeline.getKeyFrames().add(kf);
-	        return timeline;
-	 }
+	private Timeline animateBall(Circle ball) {
+		Timeline timeline = new Timeline();
+
+	    KeyFrame keyFrame = new KeyFrame(Duration.millis(16), e -> {
+	    	ball.setTranslateX(ball.getTranslateX() - ballSpeedX);
+	        ball.setTranslateY(ball.getTranslateY() - ballSpeedY);
+
+	        Bounds bounds = ball.getParent().getLayoutBounds();
+	        double radius = ball.getRadius();
+
+	        double nextX = ball.getTranslateX() + ball.getLayoutX();
+	        double nextY = ball.getTranslateY() + ball.getLayoutY();
+
+	        if (nextX <= radius || nextX >= bounds.getWidth() - radius) {
+	            ballSpeedX = -ballSpeedX;
+	        }
+
+	        if (nextY <= radius || nextY >= bounds.getHeight() - radius) {
+	            ballSpeedY = -ballSpeedY;
+	        }
+	        
+	        for (Node brick : idWall.getChildren()) {
+	            if (brick.isVisible() && ball.getBoundsInParent().intersects(brick.getBoundsInParent())) {
+	            	MusicManager.DROPSOUND.play();
+	                brick.setVisible(false); // La brique "casse"
+	                ballSpeedY = -ballSpeedY;
+	                ballSpeedX = -ballSpeedX;
+	                break;
+	            }
+	        }
+	    });
+	    
+	    timeline.getKeyFrames().add(keyFrame);
+	    timeline.setCycleCount(Timeline.INDEFINITE);
+	    return timeline;
+	}
+	
+	public static void touched(Node brick) {
+		StackPane brick1 = (StackPane) brick;
+		((Labeled) brick1.getChildren().get(0)).setText(((Labeled) brick1.getChildren().get(0)).getText() + 1);
+	}
 
 	@Override
 	public void handle(MouseEvent event) {

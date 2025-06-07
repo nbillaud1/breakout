@@ -1,19 +1,19 @@
 package breakout.controller;
 
 import breakout.audio.MusicManager;
-import breakout.model.Wall;
-import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
+import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.Bounds;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Labeled;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
@@ -49,7 +49,6 @@ public class GameViewController implements EventHandler<MouseEvent>{
 	}
 	
 	private Scene scene;
-	private Boolean collision = false;
 	
 	private double ballSpeedX = 2;
 	private double ballSpeedY = 2;
@@ -76,12 +75,16 @@ public class GameViewController implements EventHandler<MouseEvent>{
 	        double nextX = ball.getTranslateX() + ball.getLayoutX();
 	        double nextY = ball.getTranslateY() + ball.getLayoutY();
 
-	        if (nextX <= radius || nextX >= bounds.getWidth() - radius) {
+	        if (nextX <= radius || nextX >= bounds.getWidth() - radius || ball.getBoundsInParent().intersects(idPad.getBoundsInParent())) {
 	            ballSpeedX = -ballSpeedX;
 	        }
 
-	        if (nextY <= radius || nextY >= bounds.getHeight() - radius) {
+	        if (nextY <= radius/* || nextY >= bounds.getHeight() - radius*/|| ball.getBoundsInParent().intersects(idPad.getBoundsInParent())) {
 	            ballSpeedY = -ballSpeedY;
+	        }
+	        
+	        if( nextY >= bounds.getHeight() - radius) { //sortie d'écran
+	        	shutTheGame(timeline);
 	        }
 	        
 	        for (Node brick : idWall.getChildren()) {
@@ -142,6 +145,16 @@ public class GameViewController implements EventHandler<MouseEvent>{
 
 		    idPad.setTranslateX(Math.max(-limit, Math.min(limit, newX))); // empêche de dépasser les limites de la scène.
 		});
+	}
+	
+	public static void shutTheGame(Timeline timeline) {
+		PauseTransition pause = new PauseTransition(Duration.seconds(5));
+		pause.setOnFinished(event -> Platform.exit());
+		pause.play();
+		Alert fin = new Alert(AlertType.WARNING, "Vous avez perdu le jeu va s'eteindre.", ButtonType.OK);
+    	fin.show();
+    	timeline.stop();
+    	
 	}
 	
 }

@@ -135,7 +135,7 @@ public class GameViewController implements EventHandler<MouseEvent>{
 
 	public void movePad() {
 		scene.setOnKeyPressed(e -> {
-		    double gap = 10;
+		    double gap = 20;
 		    if (e.getCode() == KeyCode.LEFT) gap = -gap;
 		    else if (e.getCode() != KeyCode.RIGHT) return;
 

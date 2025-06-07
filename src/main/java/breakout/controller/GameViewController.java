@@ -86,11 +86,19 @@ public class GameViewController implements EventHandler<MouseEvent>{
 	        
 	        for (Node brick : idWall.getChildren()) {
 	            if (brick.isVisible() && ball.getBoundsInParent().intersects(brick.getBoundsInParent())) {
-	            	MusicManager.DROPSOUND.play();
-	                brick.setVisible(false); // La brique "casse"
-	                ballSpeedY = -ballSpeedY;
-	                ballSpeedX = -ballSpeedX;
-	                break;
+	            	if(((Labeled) brick).getText().compareTo("1") > 0) {
+	            		updateBrick(brick);
+	            		ballSpeedY = -ballSpeedY -1;
+		                ballSpeedX = -ballSpeedX -1;
+		                break;
+	            	}
+	            	else {
+	            		MusicManager.DROPSOUND.play();
+		                brick.setVisible(false); // La brique "casse"
+		                ballSpeedY = -ballSpeedY -1;
+		                ballSpeedX = -ballSpeedX -1;
+		                break;
+	            	}
 	            }
 	        }
 	    });
@@ -100,9 +108,21 @@ public class GameViewController implements EventHandler<MouseEvent>{
 	    return timeline;
 	}
 	
-	public static void touched(Node brick) {
-		StackPane brick1 = (StackPane) brick;
-		((Labeled) brick1.getChildren().get(0)).setText(((Labeled) brick1.getChildren().get(0)).getText() + 1);
+	public static void updateBrick(Node brick) {
+		String brickStyle = "-fx-background-color:";
+		switch(((Labeled) brick).getText()) {
+		case "5":
+			brickStyle += "#ff0000";
+		case "4":
+			brickStyle += "#ff9900";
+		case "3":
+			brickStyle += "#0088ff";
+		case "2":
+			brickStyle += "#00ff00";
+		}
+		brick.setStyle(brickStyle + ";-fx-border-color:black;");
+		((Labeled) brick).setText(Integer.toString(Integer.parseInt(((Labeled) brick).getText()) - 1));
+		
 	}
 
 	@Override

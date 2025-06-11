@@ -26,8 +26,6 @@ public class LobbyViewController implements EventHandler<MouseEvent>{
 	@FXML
 	private Button idBtnQuit;
 	
-	private String theme;
-	
 	@FXML
 	private void quit() {
 		Platform.exit();
@@ -36,23 +34,20 @@ public class LobbyViewController implements EventHandler<MouseEvent>{
 	@FXML
 	public void start() {
 		BreakoutAppSb app = new BreakoutAppSb();
-		System.out.println(idCbTheme.getValue());
 		if(idCbTheme.getValue() == null) {
 			app.startTheOriginalVersion();
 		}
 		else {
 			switch(idCbTheme.getValue()) {
 			case "Montagne": app.startTheMountainVersion();
+			break;
 			case "Plage": app.startTheBeachVersion();
+			break;
 			case "Forêt": app.startTheForestVersion();
+			break;
 			}
 		}
 	}
-	
-	public void setTheme(String theme) {
-		this.theme = theme;
-	}
-	
 	
 	public void initialize() {
 		idCbTheme.getItems().addAll("Montagne", "Plage", "Forêt");

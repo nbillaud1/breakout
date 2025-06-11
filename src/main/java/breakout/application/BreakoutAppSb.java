@@ -29,7 +29,7 @@ public class BreakoutAppSb extends Application {
 		Scene scene = new Scene(root, 700, 800);
 		
 		/*LobbyViewController controller = loader.getController(); 
-	    controller.setTheme(controller.getTheme());		*/					// on donne le theme choisi
+	    controller.setTheme(controller.getTheme());*/
 	    
 		lobbyStage.setScene(scene);
 		lobbyStage.setTitle("Breakout Lobby!");
@@ -63,7 +63,6 @@ public class BreakoutAppSb extends Application {
 	}
 	
 	public void startTheMountainVersion() {
-		System.out.println("moutain started !");
 		this.gameStage = new Stage();
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource("/breakout/view/MountainGameViewBreakout.fxml"));

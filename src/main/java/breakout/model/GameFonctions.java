@@ -36,12 +36,16 @@ public class GameFonctions {
 	        double nextX = ball.getTranslateX() + ball.getLayoutX();
 	        double nextY = ball.getTranslateY() + ball.getLayoutY();
 
-	        if (nextX <= radius || nextX >= bounds.getWidth() - radius || ball.getBoundsInParent().intersects(idPad.getBoundsInParent())) {
+	        if (nextX <= radius || nextX >= bounds.getWidth() - radius) {
 	            ballSpeedX = -ballSpeedX;
 	        }
 
-	        if (nextY <= radius/* || nextY >= bounds.getHeight() - radius*/|| ball.getBoundsInParent().intersects(idPad.getBoundsInParent())) {
+	        if (nextY <= radius) {
 	            ballSpeedY = -ballSpeedY;
+	        }
+	        
+	        if(ball.getBoundsInParent().intersects(idPad.getBoundsInParent())) {
+	        	ballSpeedY = -ballSpeedY;
 	        }
 	        
 	        if( nextY >= bounds.getHeight() - radius) { //sortie d'écran
@@ -52,17 +56,14 @@ public class GameFonctions {
 	            if (brick.isVisible() && ball.getBoundsInParent().intersects(brick.getBoundsInParent())) {
 	            	if(((Labeled) brick).getText().compareTo("1") > 0) {
 	            		updateBrick(brick);
-	            		ballSpeedY = -ballSpeedY -1;
-		                ballSpeedX = ballSpeedX -1;
-		                break;
 	            	}
 	            	else {
 	            		MusicManager.DROPSOUND.play();
 		                brick.setVisible(false); // La brique "casse"
-		                ballSpeedY = -ballSpeedY -1;
-		                ballSpeedX = -ballSpeedX -1;
-		                break;
 	            	}
+	            	ballSpeedY = -ballSpeedY -0.1;
+	                ballSpeedX = ballSpeedX -0.1;
+	                break;
 	            }
 	        }
 	    });
@@ -90,7 +91,7 @@ public class GameFonctions {
 	}
 	
 	public static void shutTheGame(Timeline timeline) {
-		PauseTransition pause = new PauseTransition(Duration.seconds(5));
+		PauseTransition pause = new PauseTransition(Duration.seconds(4));
 		pause.setOnFinished(event -> Platform.exit());
 		pause.play();
 		Alert fin = new Alert(AlertType.WARNING, "Vous avez perdu le jeu va s'eteindre.", ButtonType.OK);

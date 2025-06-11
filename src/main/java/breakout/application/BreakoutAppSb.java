@@ -7,10 +7,12 @@ import breakout.controller.ForestGameViewController;
 import breakout.controller.GameViewController;
 import breakout.controller.LobbyViewController;
 import breakout.controller.MountainGameViewController;
+import breakout.model.GameFonctions;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 

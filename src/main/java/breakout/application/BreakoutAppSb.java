@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.UncheckedIOException;
 
 import breakout.view.GameView;
+import breakout.view.Theme;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -20,8 +21,9 @@ public class BreakoutAppSb extends Application {
 		stage = primaryStage;
 		stage.setScene(new Scene(new Pane(), 700, 800));
 		stage.setTitle("Breakout");
-		stage.setMinWidth(360);
-		stage.setMinHeight(420);
+		// En dessous, les textes du jeu (mis à l'échelle du terrain) deviendraient illisibles.
+		stage.setMinWidth(480);
+		stage.setMinHeight(560);
 		showLobby();
 		stage.show();
 	}
@@ -34,8 +36,7 @@ public class BreakoutAppSb extends Application {
 		}
 	}
 
-	/** theme vaut null pour la version d'origine. */
-	public static void startGame(String theme) {
+	public static void startGame(Theme theme) {
 		GameView game = new GameView(theme, BreakoutAppSb::showLobby);
 		stage.getScene().setRoot(game);
 		game.requestFocus(); // sinon les touches n'arrivent pas au jeu

@@ -2,18 +2,46 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
-<StackPane prefHeight="800.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="breakout.controller.LobbyViewController">
+<StackPane fx:id="idRoot" prefHeight="800.0" prefWidth="700.0" styleClass="lobby" stylesheets="@lobby.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="breakout.controller.LobbyViewController">
+   <fx:define>
+      <ToggleGroup fx:id="idThemes" />
+   </fx:define>
    <children>
-      <Button fx:id="idBtn" mnemonicParsing="false" onAction="#start" text="Start" defaultButton="true" />
-      <ComboBox fx:id="idCbTheme" prefWidth="150.0" promptText="Thème" StackPane.alignment="CENTER">
+      <VBox fx:id="idPanel" alignment="CENTER" maxHeight="-Infinity" maxWidth="560.0" spacing="14.0" styleClass="panel">
+         <children>
+            <Label styleClass="title" text="BREAKOUT" />
+            <Label styleClass="subtitle" text="Casse toutes les briques avant que le mur n'atteigne ta raquette." textAlignment="CENTER" wrapText="true" />
+            <Label styleClass="section" text="Choisis ton décor" />
+            <FlowPane alignment="CENTER" hgap="10.0" vgap="10.0">
+               <children>
+                  <ToggleButton mnemonicParsing="false" selected="true" styleClass="theme" text="Classique" toggleGroup="$idThemes" userData="CLASSIQUE" />
+                  <ToggleButton mnemonicParsing="false" styleClass="theme" text="Montagne" toggleGroup="$idThemes" userData="MONTAGNE" />
+                  <ToggleButton mnemonicParsing="false" styleClass="theme" text="Plage" toggleGroup="$idThemes" userData="PLAGE" />
+                  <ToggleButton mnemonicParsing="false" styleClass="theme" text="Forêt" toggleGroup="$idThemes" userData="FORET" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </FlowPane>
+            <Button fx:id="idBtn" defaultButton="true" mnemonicParsing="false" onAction="#start" styleClass="play" text="Jouer" />
+            <Label fx:id="idBest" styleClass="best" />
+            <Label styleClass="hint" text="5 niveaux, 3 vies. Enchaîne les briques sans toucher la raquette pour multiplier les points." textAlignment="CENTER" wrapText="true" />
+         </children>
+         <padding>
+            <Insets bottom="32.0" left="32.0" right="32.0" top="32.0" />
+         </padding>
          <StackPane.margin>
-            <Insets top="100.0" />
+            <Insets left="16.0" right="16.0" />
          </StackPane.margin>
-      </ComboBox>
-      <Button fx:id="idBtnQuit" mnemonicParsing="false" onAction="#quit" text="Quit" StackPane.alignment="BOTTOM_RIGHT">
+      </VBox>
+      <Button fx:id="idBtnQuit" mnemonicParsing="false" onAction="#quit" styleClass="quit" text="Quitter" StackPane.alignment="BOTTOM_RIGHT">
          <StackPane.margin>
             <Insets bottom="20.0" right="20.0" />
          </StackPane.margin>

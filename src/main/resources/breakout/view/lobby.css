@@ -1,0 +1,116 @@
+.lobby {
+    -fx-background-color: #0b1026;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.panel {
+    -fx-background-color: rgba(8, 10, 28, 0.66);
+    -fx-background-radius: 28;
+    -fx-border-color: rgba(255, 255, 255, 0.18);
+    -fx-border-radius: 28;
+    -fx-border-width: 1.5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.45), 30, 0.2, 0, 10);
+}
+
+.title {
+    -fx-font-family: "Segoe UI Black", "Arial Black", sans-serif;
+    -fx-font-size: 64px;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 12, 0.3, 0, 4);
+}
+
+.subtitle {
+    -fx-font-size: 17px;
+    -fx-text-fill: rgba(255, 255, 255, 0.88);
+}
+
+.section {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(255, 255, 255, 0.7);
+    -fx-padding: 10 0 0 0;
+}
+
+.theme {
+    -fx-background-color: rgba(255, 255, 255, 0.10);
+    -fx-background-radius: 999;
+    -fx-border-color: rgba(255, 255, 255, 0.35);
+    -fx-border-radius: 999;
+    -fx-border-width: 1.5;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 9 22;
+    -fx-cursor: hand;
+}
+
+.theme:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.22);
+}
+
+.theme:selected {
+    -fx-background-color: white;
+    -fx-text-fill: #10142e;
+    -fx-border-color: white;
+}
+
+/* Le fond personnalisé cache l'anneau de focus par défaut : on en remet un, pour le clavier. */
+.theme:focused {
+    -fx-border-color: #ffcf33;
+    -fx-border-width: 2.5;
+}
+
+.play {
+    -fx-background-color: #ffcf33;
+    -fx-background-radius: 999;
+    -fx-text-fill: #1b1300;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 60;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(255, 207, 51, 0.45), 18, 0.2, 0, 4);
+}
+
+.play:hover {
+    -fx-background-color: #ffdb66;
+}
+
+.play:pressed {
+    -fx-background-color: #f0b800;
+}
+
+.play:focused {
+    -fx-border-color: white;
+    -fx-border-radius: 999;
+    -fx-border-width: 2.5;
+}
+
+.best {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.hint {
+    -fx-text-fill: rgba(255, 255, 255, 0.65);
+    -fx-font-size: 13px;
+}
+
+.quit {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-background-radius: 999;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8 20;
+    -fx-cursor: hand;
+}
+
+.quit:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+}
+
+.quit:focused {
+    -fx-border-color: #ffcf33;
+    -fx-border-radius: 999;
+    -fx-border-width: 2;
+}

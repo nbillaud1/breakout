@@ -33,20 +33,7 @@ public class LobbyViewController implements EventHandler<MouseEvent>{
 	
 	@FXML
 	public void start() {
-		BreakoutAppSb app = new BreakoutAppSb();
-		if(idCbTheme.getValue() == null) {
-			app.startTheOriginalVersion();
-		}
-		else {
-			switch(idCbTheme.getValue()) {
-			case "Montagne": app.startTheMountainVersion();
-			break;
-			case "Plage": app.startTheBeachVersion();
-			break;
-			case "Forêt": app.startTheForestVersion();
-			break;
-			}
-		}
+		BreakoutAppSb.startGame(idCbTheme.getValue());
 	}
 	
 	public void initialize() {

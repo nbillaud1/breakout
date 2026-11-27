@@ -5,9 +5,9 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.layout.StackPane?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="breakout.controller.LobbyViewController">
+<StackPane prefHeight="800.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="breakout.controller.LobbyViewController">
    <children>
-      <Button fx:id="idBtn" mnemonicParsing="false" onAction="#start" text="Start" />
+      <Button fx:id="idBtn" mnemonicParsing="false" onAction="#start" text="Start" defaultButton="true" />
       <ComboBox fx:id="idCbTheme" prefWidth="150.0" promptText="Thème" StackPane.alignment="CENTER">
          <StackPane.margin>
             <Insets top="100.0" />

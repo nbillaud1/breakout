@@ -1,141 +1,46 @@
 package breakout.application;
 
 import java.io.IOException;
+import java.io.UncheckedIOException;
 
-import breakout.controller.BeachGameViewController;
-import breakout.controller.ForestGameViewController;
-import breakout.controller.GameViewController;
-import breakout.controller.LobbyViewController;
-import breakout.controller.MountainGameViewController;
-import breakout.model.GameFonctions;
+import breakout.view.GameView;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
-import javafx.scene.shape.Rectangle;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 public class BreakoutAppSb extends Application {
-	
-	private Stage lobbyStage;
-	private Stage gameStage;
+
+	// Une seule fenêtre : le menu et le jeu remplacent tour à tour son contenu.
+	private static Stage stage;
 
 	@Override
-	public void start(Stage primaryStage) throws Exception {
-		this.lobbyStage = primaryStage;
-		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("/breakout/view/LobbyViewBreakout.fxml"));
-		StackPane root = new StackPane();
-		root.getChildren().add(loader.load());
-		Scene scene = new Scene(root, 700, 800);
-		
-		/*LobbyViewController controller = loader.getController(); 
-	    controller.setTheme(controller.getTheme());*/
-	    
-		lobbyStage.setScene(scene);
-		lobbyStage.setTitle("Breakout Lobby!");
-		lobbyStage.setResizable(false);
-		lobbyStage.initStyle(StageStyle.UNDECORATED);
-		lobbyStage.show();
+	public void start(Stage primaryStage) {
+		stage = primaryStage;
+		stage.setScene(new Scene(new Pane(), 700, 800));
+		stage.setTitle("Breakout");
+		stage.setMinWidth(360);
+		stage.setMinHeight(420);
+		showLobby();
+		stage.show();
 	}
-	
-	public void startTheOriginalVersion() {
-		this.gameStage = new Stage();
-		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("/breakout/view/GameViewBreakout.fxml"));
-		StackPane root = new StackPane();
+
+	public static void showLobby() {
 		try {
-			root.getChildren().add(loader.load());
+			stage.getScene().setRoot(FXMLLoader.load(BreakoutAppSb.class.getResource("/breakout/view/LobbyViewBreakout.fxml")));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new UncheckedIOException(e);
 		}
-		Scene scene = new Scene(root, 700, 800);
-		
-		GameViewController controller = loader.getController(); 
-	    controller.setScene(scene); 							// on donne la scene pour savoir quoi controller au clavier.
-	    controller.movePad();
-		
-		gameStage.setScene(scene);
-		gameStage.setTitle("Breakout!");
-		gameStage.setResizable(false);
-		gameStage.initStyle(StageStyle.UNDECORATED);
-		gameStage.show();
 	}
-	
-	public void startTheMountainVersion() {
-		this.gameStage = new Stage();
-		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("/breakout/view/MountainGameViewBreakout.fxml"));
-		StackPane root = new StackPane();
-		try {
-			root.getChildren().add(loader.load());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		Scene scene = new Scene(root, 700, 800);
-		
-		MountainGameViewController controller = loader.getController(); 
-	    controller.setScene(scene);								// on donne la scene pour savoir quoi controller au clavier.
-	    controller.movePad();
-		
-		gameStage.setScene(scene);
-		gameStage.setTitle("Breakout!");
-		gameStage.setResizable(false);
-		gameStage.initStyle(StageStyle.UNDECORATED);
-		gameStage.show();
+
+	/** theme vaut null pour la version d'origine. */
+	public static void startGame(String theme) {
+		GameView game = new GameView(theme, BreakoutAppSb::showLobby);
+		stage.getScene().setRoot(game);
+		game.requestFocus(); // sinon les touches n'arrivent pas au jeu
 	}
-	
-	public void startTheForestVersion() {
-		this.gameStage = new Stage();
-		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("/breakout/view/ForestGameViewBreakout.fxml"));
-		StackPane root = new StackPane();
-		try {
-			root.getChildren().add(loader.load());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		Scene scene = new Scene(root, 700, 800);
-		
-		ForestGameViewController controller = loader.getController(); 
-	    controller.setScene(scene);								// on donne la scene pour savoir quoi controller au clavier.
-	    controller.movePad();
-		
-		gameStage.setScene(scene);
-		gameStage.setTitle("Breakout!");
-		gameStage.setResizable(false);
-		gameStage.initStyle(StageStyle.UNDECORATED);
-		gameStage.show();
-	}
-	
-	public void startTheBeachVersion() {
-		this.gameStage = new Stage();
-		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("/breakout/view/BeachGameViewBreakout.fxml"));
-		StackPane root = new StackPane();
-		try {
-			root.getChildren().add(loader.load());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		Scene scene = new Scene(root, 700, 800);
-		
-		BeachGameViewController controller = loader.getController(); 
-	    controller.setScene(scene);								// on donne la scene pour savoir quoi controller au clavier.
-	    controller.movePad();
-		
-		gameStage.setScene(scene);
-		gameStage.setTitle("Breakout!");
-		gameStage.setResizable(false);
-		gameStage.initStyle(StageStyle.UNDECORATED);
-		gameStage.show();
-	}
-	
+
 	public static void main(String[] args) {
 		Application.launch(args);
 	}

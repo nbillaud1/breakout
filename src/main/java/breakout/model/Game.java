@@ -76,10 +76,16 @@ public class Game {
 				double dy = ballY - clamp(ballY, by, by + BRICK_H);
 				if (dx * dx + dy * dy > RADIUS * RADIUS) continue;
 
-				// On renvoie la balle du côté de la brique qu'elle a touché.
-				if (Math.abs(dx) > Math.abs(dy)) vx = Math.signum(dx) * Math.abs(vx);
-				else if (dy != 0) vy = Math.signum(dy) * Math.abs(vy);
-				else vy = -vy;
+				// On renvoie la balle du côté de la brique qu'elle a touché et on la sort de la brique :
+				// sinon elle la chevauche encore à l'image suivante et la même touche compte plusieurs fois.
+				if (Math.abs(dx) > Math.abs(dy)) {
+					vx = Math.signum(dx) * Math.abs(vx);
+					ballX = (dx > 0 ? bx + BRICK_W : bx) + Math.signum(dx) * RADIUS;
+				} else {
+					boolean below = dy > 0 || (dy == 0 && vy < 0); // centre dans la brique : on la renvoie d'où elle vient
+					vy = below ? Math.abs(vy) : -Math.abs(vy);
+					ballY = below ? by + BRICK_H + RADIUS : by - RADIUS;
+				}
 
 				double speed = Math.hypot(vx, vy);
 				double factor = Math.min(speed * 1.02, MAX_SPEED) / speed;
@@ -93,6 +99,15 @@ public class Game {
 			}
 		}
 		return false;
+	}
+
+	/** Pour les tests : place la balle en jeu à une position et une vitesse données. */
+	void placeBall(double x, double y, double speedX, double speedY) {
+		state = State.PLAYING;
+		ballX = x;
+		ballY = y;
+		vx = speedX;
+		vy = speedY;
 	}
 
 	private void placeBallOnPad() {

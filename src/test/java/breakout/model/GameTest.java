@@ -41,6 +41,18 @@ class GameTest {
 		assertEquals(Game.State.WON, game.state());
 	}
 
+	@Test
+	void oneImpactRemovesOnlyOnePoint() {
+		Game game = new Game();
+		int col = 3, row = Wall.ROWS - 2; // brique à 2 points, celle du dessous est retirée
+		game.wall().brick(Wall.ROWS - 1, col).setDifficulty(0);
+		double brickBottom = Game.WALL_TOP + (row + 1) * Game.BRICK_H;
+		// Balle lente qui chevauche déjà le bas de la brique : elle y resterait plusieurs images sans correction.
+		game.placeBall(col * Game.BRICK_W + Game.BRICK_W / 2, brickBottom + 2, 0, -100);
+		for (int i = 0; i < 50; i++) game.update(DT);
+		assertEquals(1, game.wall().brick(row, col).difficulty());
+	}
+
 	private static int damagedBricks(Game game) {
 		int n = 0;
 		for (int r = 0; r < Wall.ROWS; r++)
